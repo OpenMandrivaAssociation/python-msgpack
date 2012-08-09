@@ -19,6 +19,7 @@ Group:		Development/Python
 Url:		http://msgpack.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	python-cython
+BuildRequires:	python-setuptools
 
 %description
 MessagePack is a binary-based efficient data interchange format that
