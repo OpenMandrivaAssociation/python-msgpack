@@ -1,0 +1,11 @@
+--- setup.py.bak	2012-08-08 17:25:28.699308694 -0400
++++ setup.py	2012-08-08 17:25:38.346250599 -0400
+@@ -64,7 +64,7 @@
+ f.close()
+ del f
+ 
+-setup(name='msgpack-python',
++setup(name='msgpack',
+       author='INADA Naoki',
+       author_email='songofacandy@gmail.com',
+       version=version_str,
