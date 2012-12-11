@@ -44,3 +44,10 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %defattr(-,root,root)
 %doc COPYING README.rst
 %py_platsitedir/msgpack*
+
+
+%changelog
+* Thu Aug 09 2012 Lev Givon <lev@mandriva.org> 0.2.0-1
++ Revision: 813601
+- imported package python-msgpack
+
