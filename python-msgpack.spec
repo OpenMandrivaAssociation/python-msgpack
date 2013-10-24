@@ -10,14 +10,13 @@
 
 Summary:	MessagePack (de)serializer for Python
 Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	http://pypi.python.org/packages/source/m/%{tarname}/%{tarname}-%{version}.tar.gz
+Version:	0.3.0
+Release:	1
+Source0:	https://pypi.python.org/packages/source/m/msgpack-python/msgpack-python-%{version}.tar.gz
 Patch0:		egg-info-0.2.0.patch
 License:	Apache License
 Group:		Development/Python
 Url:		http://msgpack.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	python-cython
 BuildRequires:	python-setuptools
 
@@ -34,14 +33,11 @@ small.
 %__python setup.py build
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %clean
-%__rm -rf %{buildroot}
 
 %files 
-%defattr(-,root,root)
 %doc COPYING README.rst
 %py_platsitedir/msgpack*
 
@@ -50,4 +46,5 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 * Thu Aug 09 2012 Lev Givon <lev@mandriva.org> 0.2.0-1
 + Revision: 813601
 - imported package python-msgpack
+
 
