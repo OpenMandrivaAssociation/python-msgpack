@@ -1,16 +1,12 @@
 %define tarname	msgpack-python
-%define name	python-msgpack
-%define version 0.2.0
 %define	rel		1
 %if %mdkversion < 201100
-%define release %mkrel %rel
 %else
-%define	release	%rel
 %endif
 
 Summary:	MessagePack (de)serializer for Python
-Name:		%{name}
-Version:	0.3.0
+Name:		python-msgpack
+Version:	0.4.0
 Release:	1
 Source0:	https://pypi.python.org/packages/source/m/msgpack-python/msgpack-python-%{version}.tar.gz
 Patch0:		egg-info-0.2.0.patch
@@ -46,5 +42,6 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 * Thu Aug 09 2012 Lev Givon <lev@mandriva.org> 0.2.0-1
 + Revision: 813601
 - imported package python-msgpack
+
 
 
