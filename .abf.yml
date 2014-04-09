@@ -2,5 +2,6 @@ removed_sources:
   msgpack-python-0.2.0.tar.gz: cb0a47772a9f549993f84a5e79cfb027028b953f
   msgpack-python-0.3.0.tar.gz: 9b2e35753819c98b31abfe907c13798a5ebb5851
   msgpack-python-0.4.0.tar.gz: 5915f60033168a7b6f1e76ddb8a514f84ebcdf81
-sources:
   msgpack-python-0.4.1.tar.gz: ae7b4d1afab10cd78baada026cad1ae92354852b
+sources:
+  msgpack-python-0.4.2.tar.gz: 127ca4c63b182397123d84032ece70d43fa4f869

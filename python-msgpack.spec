@@ -5,8 +5,9 @@
 %endif
 
 Summary:	MessagePack (de)serializer for Python
+
 Name:		python-msgpack
-Version:	0.4.1
+Version:	0.4.2
 Release:	1
 Source0:	https://pypi.python.org/packages/source/m/msgpack-python/msgpack-python-%{version}.tar.gz
 Patch0:		egg-info-0.2.0.patch
@@ -35,14 +36,7 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %files 
 %doc COPYING README.rst
-%py_platsitedir/msgpack*
-
-
-%changelog
-* Thu Aug 09 2012 Lev Givon <lev@mandriva.org> 0.2.0-1
-+ Revision: 813601
-- imported package python-msgpack
-
+%{py_platsitedir}/msgpack*
 
 
 
