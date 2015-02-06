@@ -8,7 +8,7 @@ Summary:	MessagePack (de)serializer for Python
 
 Name:		python-msgpack
 Version:	0.4.2
-Release:	1
+Release:	2
 Source0:	https://pypi.python.org/packages/source/m/msgpack-python/msgpack-python-%{version}.tar.gz
 Patch0:		egg-info-0.2.0.patch
 License:	Apache License
