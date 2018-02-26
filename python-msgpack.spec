@@ -1,36 +1,57 @@
 %define debug_package	%{nil}
 
-%define tarname	msgpack-python
+%define tarname	msgpack
 
 Summary:	MessagePack (de)serializer for Python
 Name:		python-msgpack
-Version:	0.4.5
+Version:	0.5.6
 Release:	1
-Source0:	https://pypi.python.org/packages/source/m/msgpack-python/msgpack-python-%{version}.tar.gz
-Patch0:		egg-info-0.2.0.patch
+Source0:	https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-%{version}.tar.gz
 License:	Apache License
 Group:		Development/Python
 Url:		http://msgpack.org/
 BuildRequires:	python-cython
 BuildRequires:	python-setuptools
+BuildRequires:	python2-setuptools
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python2)
 
 %description
 MessagePack is a binary-based efficient data interchange format that
 is focused on high performance. It is like JSON, but very fast and
 small.
 
+%package -n python2-msgpack
+Summary: %{summary} / Python2
+
 %prep
-%setup -q -n %{tarname}-%{version}
-%patch0 -p0
+%setup -qc
+mv %{tarname}-%{version} python2
+cp -a python2 python3
 
 %build
-python setup.py build
+pushd python2
+python2 setup.py build
+popd
+
+pushd python3
+python3 setup.py build
+popd
 
 %install
-PYTHONDONTWRITEBYTECODE=  python setup.py install --root=%{buildroot}
+pushd python2
+PYTHONDONTWRITEBYTECODE=  python2 setup.py install --root=%{buildroot}
+popd
 
-%clean
+pushd python3
+PYTHONDONTWRITEBYTECODE=  python3 setup.py install --root=%{buildroot}
+popd
 
 %files 
-%doc COPYING README.rst
+%doc python3/COPYING python3/README.rst
 %{py_platsitedir}/msgpack*
+
+%files -n python2-msgpack
+%doc python2/COPYING python2/README.rst
+%{py2_platsitedir}/msgpack*
+
