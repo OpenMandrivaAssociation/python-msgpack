@@ -4,8 +4,9 @@
 
 Summary:	MessagePack (de)serializer for Python
 Name:		python-msgpack
-Version:	0.5.6
+Version:	0.6.1
 Release:	1
+# https://pypi.org/project/msgpack/
 Source0:	https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-%{version}.tar.gz
 License:	Apache License
 Group:		Development/Python
@@ -23,6 +24,12 @@ small.
 
 %package -n python2-msgpack
 Summary: %{summary} / Python2
+
+%description -n python2-msgpack
+MessagePack is a binary-based efficient data interchange format that
+is focused on high performance. It is like JSON, but very fast and
+small.
+
 
 %prep
 %setup -qc

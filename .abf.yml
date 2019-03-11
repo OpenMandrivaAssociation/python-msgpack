@@ -1,4 +1,2 @@
-removed_sources:
-  msgpack-python-0.4.2.tar.gz: 127ca4c63b182397123d84032ece70d43fa4f869
 sources:
-  msgpack-0.5.6.tar.gz: 916c234864a5eaae179982dcd4b20efaa3677a30
+  msgpack-0.6.1.tar.gz: 143402b2d24ab3d1edcfd02e0122a19d50e3b679
