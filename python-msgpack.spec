@@ -4,7 +4,7 @@
 
 Summary:	MessagePack (de)serializer for Python
 Name:		python-msgpack
-Version:	0.6.1
+Version:	0.6.2
 Release:	1
 # https://pypi.org/project/msgpack/
 Source0:	https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-%{version}.tar.gz
