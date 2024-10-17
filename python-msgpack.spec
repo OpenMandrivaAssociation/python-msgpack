@@ -10,7 +10,7 @@ Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-%{version}.tar.gz
 License:	Apache License
 Group:		Development/Python
-Url:		http://msgpack.org/
+Url:		https://msgpack.org/
 BuildRequires:	python-cython
 BuildRequires:	python-setuptools
 BuildRequires:	pkgconfig(python3)
