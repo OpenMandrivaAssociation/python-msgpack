@@ -4,15 +4,15 @@
 
 Summary:	MessagePack (de)serializer for Python
 Name:		python-msgpack
-Version:	1.1.0
+Version:	1.1.2
 Release:	1
 # https://pypi.org/project/msgpack/
 Source0:	https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-%{version}.tar.gz
 License:	Apache License
 Group:		Development/Python
 Url:		https://msgpack.org/
-BuildRequires:	python-cython
-BuildRequires:	python-setuptools
+BuildRequires:	python%{pyver}dist(cython)
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(python3)
 
 %description
