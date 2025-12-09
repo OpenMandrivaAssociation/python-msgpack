@@ -5,7 +5,7 @@
 Summary:	MessagePack (de)serializer for Python
 Name:		python-msgpack
 Version:	1.1.2
-Release:	1
+Release:	2
 # https://pypi.org/project/msgpack/
 Source0:	https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-%{version}.tar.gz
 License:	Apache License
@@ -14,20 +14,12 @@ Url:		https://msgpack.org/
 BuildRequires:	python%{pyver}dist(cython)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(python3)
+BuildSystem:	python
 
 %description
 MessagePack is a binary-based efficient data interchange format that
 is focused on high performance. It is like JSON, but very fast and
 small.
-
-%prep
-%autosetup -p1 -n msgpack-%{version}
-
-%build
-python setup.py build
-
-%install
-PYTHONDONTWRITEBYTECODE=  python3 setup.py install --root=%{buildroot}
 
 %files 
 %doc COPYING README.md
